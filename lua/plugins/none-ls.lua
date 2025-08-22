@@ -1,0 +1,24 @@
+return {
+  "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+  },
+  opts = function(_, opts)
+    local null_ls = require("null-ls")
+    null_ls.setup({
+      sources = {
+        require("none-ls.formatting.ruff"),
+        require("none-ls.formatting.ruff_format"),
+        require("none-ls.formatting.trim_newlines"),
+        require("none-ls.formatting.trim_witespace"),
+        require("none-ls.diagnostics.eslint"),
+        require("none-ls.diagnostics.eslintd"),
+        require("none-ls.diagnostics.ruff"),
+        require("none-ls.diagnostics.yamllint"),
+        require("none-ls.diagnostics.cpplint"),
+        require("none-ls.code_actions.eslint"),
+        require("none-ls.code_actions.eslint_d"),
+      },
+    })
+  end,
+}
