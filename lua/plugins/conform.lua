@@ -5,6 +5,8 @@ return {
       javascript = { "prettierd", "prettier", stop_after_first = true },
       html = { "superhtml" },
       python = { "ruff" },
+      cpp = { "clang_format" },
+      c = { "clang_format" },
     },
   },
 }

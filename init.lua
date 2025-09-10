@@ -11,3 +11,5 @@ vim.g.clipboard = {
     ["*"] = "win32yank.exe -o --lf",
   },
 }
+vim.opt.colorcolumn = "100"
+vim.opt.cursorcolumn = true
